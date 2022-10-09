@@ -2,6 +2,7 @@ import React ,{useContext}from 'react'
 import CreateEventButton from './CreateEvenButton'
 import GlobalContext from '../context/GlobalContext';
 import dayjs from 'dayjs';
+import SmallCalendar from './SmallCalendar';
 
 export default function Sidebar() {
   const {monthIndex, setMonthIndex} = useContext(GlobalContext)
@@ -17,6 +18,7 @@ export default function Sidebar() {
       </span> 
       </button>
     <CreateEventButton/>
+    <SmallCalendar/>
     
     </aside>
   )
