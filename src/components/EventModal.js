@@ -10,7 +10,7 @@ export default function EventModal() {
         selectedEvent,
     } = useContext(GlobalContext)
     const [title, setTitle] = useState(selectedEvent ? selectedEvent.title :"")
-    const [description, setDescription] = useState(" ") 
+    const [description, setDescription] = useState(selectedEvent ? selectedEvent.description :"") 
     const [selectedLabel , setSelectedLabel] = useState(selectedEvent ? labelsClasses.find((lbl) => lbl === selectedEvent.label) : labelsClasses[0])
     
 
@@ -22,7 +22,7 @@ export default function EventModal() {
           description,
           label: selectedLabel,
           day: daySelected.valueOf(),
-          id: selectedEvent ? selectedEvent.id : Date.now()
+          id: selectedEvent ? selectedEvent.id : Date.now(), 
         };
         if(selectedEvent){
             dispatchCalEvent({ type: 'update', payload: calendarEvent });
@@ -34,7 +34,7 @@ export default function EventModal() {
   return (
     <div className='h-screen w-full fixed left-0 top-0 flex justify-center items-center'>
         <form className='bg-white rounded-lg shadow-2xl w-1/2'>
-            <header className='bg-gray-100 px-4 py-2 flex justify-between items-center'>
+            <header className='bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 px-4 py-2 flex justify-between items-center'>
                <div></div>
                 <div>
                     {selectedEvent && (
@@ -44,13 +44,13 @@ export default function EventModal() {
                             setShowEventModal(false);
                             
                         } }
-                        className='material-icons-outlined text-gray-400 cursor-pointer'>
-                        delete
+                        className='border-4 border-orange-600 rounded cursor-pointer font-bold mr-2 hover:border-white'>
+                         Delete
                         </span>
                     )}
                      <button onClick={() => setShowEventModal(false)}>
-                <span className='material-icons-outlined text-gray-400'>
-                    close
+                <span className='border-4 border-orange-600 rounded cursor-pointer font-bold mr-2 hover:border-white '>
+                    Close
                     </span>
                 </button>
                 </div>
@@ -59,7 +59,7 @@ export default function EventModal() {
             <div className='p-3'>
             <div className='grid grid-cols-1/5 items-end gap-y-7'>
                 <div>
-                <p className='font-bold text-2xl'>Title : </p>
+                <p className='font-semibold text-md'>Title : </p>
                 </div>
             <input 
                 type="text" 
@@ -71,7 +71,7 @@ export default function EventModal() {
                 onChange={(e) => setTitle(e.target.value)}
             />
             <span className='text-gray-400 text-md'>
-                Current date :
+                Selected date :
             </span>
             <p className='text-orange-500 font-bold text-xl'>{daySelected.format("dddd, MMMM DD")}</p>
             <div>

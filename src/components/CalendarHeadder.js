@@ -17,22 +17,7 @@ export default function CalendarHeadder() {
         <h1 className="rainbow rainbow_text_animated">
             My Calendar!
         </h1>
-        <div className='prev cursor-pointer' onClick={handlePrevMonth}>
-            Prev
-        </div>
-    <button onClick={handlePrevMonth}>
-        <span className="material-icons-outlined cursor-pointer text-gray-600 mx-2">
-            chevron_left
-        </span>
-    </button>
-    <div className='next cursor-pointer' onClick={handleNextMonth}>
-            Next
-        </div>
-    <button onClick={handleNextMonth}>
-        <span className="material-icons-outlined cursor-pointer text-gray-600 mx-2">
-            chevron_right
-        </span>
-    </button>
+      
     <p1 className ='ml-6 text-gray-500'>
         Current month :
     </p1>
