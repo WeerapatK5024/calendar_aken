@@ -25,7 +25,7 @@ useEffect(() => {
         <CalendarHeadder />
         <div className="flex flex-1">
           <Sidebar />
-          <Month month ={currentMonth}/>
+          <Month month ={currentMonth}/> 
         </div>
       </div>
     </React.Fragment>

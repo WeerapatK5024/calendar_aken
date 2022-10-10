@@ -20,7 +20,6 @@ export default function EventModal() {
         const calendarEvent = {
           title,
           description,
-          label: selectedLabel,
           day: daySelected.valueOf(),
           id: selectedEvent ? selectedEvent.id : Date.now(), 
         };

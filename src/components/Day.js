@@ -36,9 +36,9 @@ export default function Day({day , rowIdx}) {
                 </p>
             )}
         
-             <p className={`text-sm p-1 my-1 text-center ${getCurrentDayClass()}`}>
+             <p className={`text-sm p-1 my-1 text-center ${getCurrentDayClass()}  hover:bg-orange-300 rounded p-1`}>
             {day.format('DD')}
-        </p>
+        </p>  
         </header>
         <div className='flex-1 cursor-pointer' onClick={() =>  {
           setDaySelected(day);
