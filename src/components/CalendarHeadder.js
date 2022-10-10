@@ -13,17 +13,16 @@ export default function CalendarHeadder() {
     }
  
   return (
-    <div className="px-4 py-2 flex items-center">
-        <h1 className="rainbow rainbow_text_animated">
-            My Calendar!
+    <div className="px-4 py-2 flex items-center tracking-widest">
+        <h1 className="rainbow rainbow_text_animated ">
+           My Calendar !
         </h1>
       
     <p1 className ='ml-6 text-gray-500'>
         Current month :
     </p1>
-    <h2 className='ml-1 text-xl text-orange-600 font-bold'>
-        
-        {dayjs(new Date(dayjs().year(),monthIndex)).format("MMMM YYYY")}
+    <h2 className='ml-1 text-xl text-orange-600 font-bold rounded-xl border-2 border-sky-300 p-1'> 
+          {dayjs(new Date(dayjs().year(),monthIndex)).format("MMMM YYYY")}
     </h2>
     </div>
   )

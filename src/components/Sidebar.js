@@ -16,7 +16,7 @@ function handleNextMonth(){
   setMonthIndex(monthIndex+1);
 }
   return (
-    <aside className="border p-5 w-64">
+    <aside className="border-2 border-black p-5 w-64">
       <div className='mb-3 '>
         <button onClick={handlePrevMonth}>
         <span className=' cursor-pointer mx-2 font-bold bg-gradient-to-l from-yellow-500 via-orange-500 to-red-500 rounded p-1 hover:border-l-8 hover:border-black'>
@@ -29,7 +29,7 @@ function handleNextMonth(){
         </span>
         </button>
         </div>
-      <button onClick={handleReset} className="border-y-4 mb-2 p-2   flex items-center shadow-md hover:border-4 hover:border-y-orange-500 static hover:font-bold">
+      <button onClick={handleReset} className="border-y-4 border-black p-2 flex items-center shadow-md hover:border-y-orange-500 static hover:font-bold mb-2">
       <span className='pl-3 pr-7 '>
         Go to Today
       </span> 

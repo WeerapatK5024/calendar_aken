@@ -1,3 +1,5 @@
+
+
 .rainbow {
     text-align: center;
     text-decoration: underline;
@@ -5,6 +7,9 @@
     font-weight: bold;
     letter-spacing: 5px;
     margin-right: 1cm ;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
+
 }
 .rainbow_text_animated {
     background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);

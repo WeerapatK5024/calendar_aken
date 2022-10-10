@@ -33,8 +33,12 @@ export default function EventModal() {
     }
   return (
     <div className='h-screen w-full fixed left-0 top-0 flex justify-center items-center'>
-        <form className='bg-white rounded-lg shadow-2xl w-1/2'>
-            <header className='bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 px-4 py-2 flex justify-between items-center'>
+        <form className='bg-white rounded-lg shadow-2xl w-1/1.5'>
+            <header className='bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 px-4 py-2 flex justify-flex items-center'>
+            <span className='text-white text-md pr-2'>
+                Selected date :
+            </span>
+            <p className='text-orange-300 font-bold text-xl pr-72 '>{daySelected.format("dddd, MMMM DD")}</p>
                <div></div>
                 <div>
                     {selectedEvent && (
@@ -70,10 +74,6 @@ export default function EventModal() {
                 className="pt-3 border-0 text-gray-600 text-xl font-semibold pb-2 w-full border-b-2  border-gray-200 focus:outline-none focus:ring-0 focus:border-orange-500"
                 onChange={(e) => setTitle(e.target.value)}
             />
-            <span className='text-gray-400 text-md'>
-                Selected date :
-            </span>
-            <p className='text-orange-500 font-bold text-xl'>{daySelected.format("dddd, MMMM DD")}</p>
             <div>
                 <p className='font-semibold text-sm'>Description : </p>
             </div>

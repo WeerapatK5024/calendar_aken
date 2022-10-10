@@ -18,10 +18,10 @@ useEffect(() => {
 }, [monthIndex])
 
   return (
-    <React.Fragment>
+    <React.Fragment >
       {showEventModal && <EventModal/> }
       
-      <div className="h-screen flex flex-col ">
+      <div className="h-screen flex flex-col  " >
         <CalendarHeadder />
         <div className="flex flex-1">
           <Sidebar />
